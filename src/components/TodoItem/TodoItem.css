@@ -1,0 +1,77 @@
+.todo-item {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    padding: 18px 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  .todo-item:hover {
+    box-shadow: 0 15px 25px rgba(41, 128, 185, 0.2);
+    transform: translateY(-4px);
+  }
+  
+  .checkbox-container {
+    position: relative;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2.5px solid #2980b9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .checkbox-container.checked {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+  
+  .checkbox-container svg {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .checkbox-container.checked svg {
+    opacity: 1;
+  }
+  
+  .todo-item span {
+    flex-grow: 1;
+    font-size: 1.3rem;
+    color: #34495e;
+    user-select: none;
+    transition: color 0.3s ease;
+  }
+  
+  .todo-item span.completed {
+    color: #95a5a6;
+    font-style: italic;
+    text-decoration: none;
+  }
+  
+  .todo-item button {
+    position: absolute;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+    padding: 6px;
+    border-radius: 8px;
+  }

@@ -1,0 +1,110 @@
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    background: #fff;
+  }
+  
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 28px;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    position: relative;
+  }
+  
+  li:hover {
+    background-color: #e6f0fb;
+    transform: translateX(8px);
+    box-shadow: 4px 8px 16px rgba(41, 128, 185, 0.15);
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+
+  li span {
+    flex-grow: 1;
+    font-size: 1.15rem;
+    user-select: none;
+    transition: color 0.3s ease;
+    padding-right: 15px;
+  }
+  
+  li span.completed {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-style: italic;
+  }
+  
+
+li button {
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  opacity: 0.75;
+}
+
+li button:hover {
+  color: #c0392b;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+
+.simple-title {
+  font-size: clamp(1.8rem, 5vw, 3.5rem); 
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  max-width: 90vw;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.todo-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  width: 100%;
+  min-width: 700px; 
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+
+@media (max-width: 760px) {
+  .todo-container {
+    min-width: auto; 
+    padding: 20px 4px; 
+    margin: 20px 10px 40px; 
+    max-width: 100%; 
+  }
+}
